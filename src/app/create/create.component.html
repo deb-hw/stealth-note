@@ -1,5 +1,19 @@
-<div class= " jumbotron">
-<h2> The Create Page</h2>
-    <p>Now, what are you going to create?</p>
-      
+<div class="container">
+    <h2>Message Form</h2>
+    <br>
+    <form autocomplete="off" (ngSubmit)="onSubmit()">
+        <div class="formGroup">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="message.title" required #spy> {{spy.className}}
+        </div>
+        <br>
+        <div class="formGroup">
+            <label for="title">Message</label>
+            <textarea class="form-control" required id="message" name="message" [(ngModel)]="message.message"> 
+            </textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success "> Submit </button>
+    </form>
+    {{title}} {{message}}
 </div>
